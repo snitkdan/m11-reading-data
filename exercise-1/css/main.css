@@ -9,3 +9,7 @@ p {
   list-style-type: none;
   padding:10px;
 }
+
+td {
+  padding-right: 10px;
+}
