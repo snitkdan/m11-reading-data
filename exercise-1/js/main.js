@@ -27,7 +27,7 @@ $(function() {
     // Add a cell (<td>) for each key/value pair in your object
     // Select your `sandbox` section, and append your table to it
     var createTable = function(data) {
-        $("#sandbox").append("<table><tr ><td > student_id<td > exam1<td > exam2</tr >");
+        $("#sandbox").append("<table class='striped' id='table'><tr><th> student_id </th><th> exam1</th><th>exam2</th>");
         var keys = Object.keys(data);
         keys.forEach(function(key) {
             var colKeys = Object.keys(data[key]);
@@ -36,7 +36,7 @@ $(function() {
                 newEntry += " <td>" + data[key][col] + " </td>";
             });
             newEntry += "</tr>";
-            $("table").append(newEntry);
+            $("#table").append(newEntry);
         });
     };
 
